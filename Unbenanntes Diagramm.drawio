@@ -106,11 +106,6 @@
         <mxCell id="dMpIjYGvDLAZJx-49gKq-1809" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;noEdgeStyle=1;" parent="1" source="1774" target="dMpIjYGvDLAZJx-49gKq-1808" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dMpIjYGvDLAZJx-49gKq-1811" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1774" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="300" y="827" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="1774" value="Blick &amp;amp; Gestensteuerung" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeColor=none;strokeWidth=3;fillColor=#61c6ce;fontFamily=Helvetica;fontSize=14;fontColor=#FFFFFF;align=center;spacing=5;fontStyle=0;arcSize=7;perimeterSpacing=2;" parent="1" vertex="1">
           <mxGeometry x="301" y="874" width="150" height="60" as="geometry" />
         </mxCell>
