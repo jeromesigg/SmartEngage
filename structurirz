@@ -1,0 +1,70 @@
+workspace "Smart Engage" "Description"
+
+    !identifiers hierarchical
+
+    model {
+        u = person "Präsentator"
+        km = softwareSystem "Kamera / Mikrofon" 
+        ss = softwareSystem "Smart Engage" {
+            se = container "Smart Engage Kernel"
+            wa = container "Web Applikation"
+            group "Analyse" {
+                ki = container "KI"
+                va = container "Verbale Analyse"
+                pa = container "paraverbale Analyse"
+                na = container "nonverbale Analyse"
+            }
+            db = container "Datenbank" {
+                tags "Datenbank"
+            }
+        }
+
+        u -> ss.se "Uses"
+        km -> ss.se "Uses"
+        u -> km "Uses"
+        ss.se -> ss.db "Liest und schreibt zu"
+        ss.se -> ss.wa "Übergibt Daten für Dashboard"
+        ss.se -> ss.va "Übergibt Datenstream"
+        ss.se -> ss.pa "Übergibt Datenstream"
+        ss.se -> ss.na "Übergibt Datenstream"
+        ss.pa -> ss.ki "Übergibt analysierte Daten"
+        ss.na -> ss.ki "Übergibt analysierte Daten"
+        ss.va -> ss.ki "Übergibt analysierte Daten"
+        ss.ki -> ss.se "Übergibt Verbesserungsvorschläge"
+    }
+
+    views {
+        systemContext ss "Context-Diagramm" {
+            include *
+            autolayout lr
+        }
+
+        container ss "Container-Diagramm" {
+            include *
+            autolayout lr
+        }
+
+        styles {
+            element "Element" {
+                color white
+            }
+            element "Person" {
+                background #116611
+                shape person
+            }
+            element "Software System" {
+                color #2D882D
+            }
+            element "Container" {
+                background #55aa55
+            }
+            element "Database" {
+                shape cylinder
+            }
+            element "Group" {
+                color #ff0000
+            }
+        }
+    }
+
+}
